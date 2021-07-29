@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *
 !**/
 !*.*
@@ -27,3 +28,17 @@ nimbledeps/
 *.pdb
 .DS_Store
 *.out
+=======
+napibuild
+
+*~
+*.swp
+*.swo
+bin/napibuild
+**/nimcache/
+**/build/
+**/node_modules/
+**/package-lock.json
+**/binding.gyp
+
+>>>>>>> al/master

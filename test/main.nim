@@ -16,4 +16,3 @@ init proc(exports: Module) =
     ##``args[1]`` : index
     ##``args[2]`` : default
     args[0].getElement(args[1].getInt, args[2])
-

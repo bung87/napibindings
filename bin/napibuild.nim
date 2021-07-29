@@ -1,12 +1,12 @@
 import json, docopt, os, osproc
 
 const ExplicitSourcePath {.strdefine.} = os.parentDir(os.parentDir(os.getCurrentCompilerExe()))
+
 const LibPath = ExplicitSourcePath / "lib"
 const doc = """
 NodeBuild.
 Usage:
   napibuild <projectfile> [options]
-
 Options:
   -C          do not recompile projectfile
   -r          release build
@@ -21,7 +21,6 @@ var
   nimcache = project.dir / "nimcache" #$args["<nimcache>"]
   target = %* {"target_name": project.name}
   gyp = %* {"targets": [target]}
-
 
 if not args["-C"]:
   var releaseFlag = if args["-r"]: "-d:release " else: "--embedsrc "

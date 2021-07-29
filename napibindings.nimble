@@ -1,15 +1,14 @@
-version  = "0.0"
+version  = "0.1.0"
 author  = "andrew breidenbach"
 description  = "bindings for node api"
 license  = "MIT"
-srcDir = "src"
 skipDirs  = @["test", ".git"]
-bin  = @["napibuild"]
+bin  = @["bin/napibuild"]
 
 requires "docopt"
 
 task test,"test":
   withDir "test":
     exec "yarn install --ignore-scripts"
-  exec "nim c -r src/napibuild.nim test/main.nim"
+  exec "nim c -r bin/napibuild.nim test/main.nim"
   exec "node test/index.js"
