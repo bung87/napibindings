@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "nim napi test",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bung87/napibindings.git"
+  },
   "scripts": {
     "install": "prebuild-install",
     "build": "prebuild -r node",
