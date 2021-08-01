@@ -35,10 +35,15 @@ jobs:
         working-directory: test
       - name: test
         run: nimble test
+      
+      - name: Check if Git tag exists
+        run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
       - name: build
         run: yarn build
+        if: env.HEAD_TAG != '' 
         working-directory: test
       - name: publish
+        if: env.HEAD_TAG != '' 
         working-directory: test
         env:
           PREBUILD_TOKEN: ${{ secrets.PREBUILD_TOKEN }}
