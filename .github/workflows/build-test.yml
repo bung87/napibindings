@@ -49,4 +49,4 @@ jobs:
         working-directory: test
         env:
           PREBUILD_TOKEN: ${{ secrets.PREBUILD_TOKEN }}
-        run: yarn prebuild --upload-all -u ${{ secrets.PREBUILD_TOKEN }}
+        run: yarn prebuild --upload-all ${{ secrets.PREBUILD_TOKEN }}
