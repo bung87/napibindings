@@ -9,7 +9,7 @@
   },
   "scripts": {
     "install": "prebuild-install",
-    "build": "prebuild --all",
+    "build": "prebuild",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "binary": {
