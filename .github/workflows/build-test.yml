@@ -38,6 +38,8 @@ jobs:
       
       - name: Check if Git tag exists
         run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - name: build
         run: yarn build
         if: env.HEAD_TAG != '' 
