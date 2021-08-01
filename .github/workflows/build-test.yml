@@ -35,6 +35,9 @@ jobs:
         working-directory: test
       - name: test
         run: nimble test
+      - name: build
+        run: yarn build
+        working-directory: test
       - name: publish
         working-directory: test
         env:
